@@ -1,10 +1,10 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, TextInput, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, TextInput } from 'react-native';
 import { ImageBackground } from 'react-native';
 
-function SettingScreen() {
-    const handleVersionPress = ()=>{console.log("Saving")};
+function SettingScreen({navigation}) {
+    const handleVersionPress = ()=>{alert("version 1.0")};
   return (
     <ImageBackground style={styles.background} source={require("../assets/bg.png")}>  
         <ScrollView style = {styles.scroll}>
@@ -18,7 +18,7 @@ function SettingScreen() {
             <View><TextInput secureTextEntry={true} placeholder='Password' underlineColorAndroid='transparent' style={styles.TextInput}></TextInput></View>
         </ScrollView>
 
-        <TouchableOpacity onPress={()=>{console.log("Saving")}} style={styles.button}>
+        <TouchableOpacity onPress={()=>{alert("Saved");navigation.push('SelectAction')}} style={styles.button}>
                 <Text style={styles.buttonText}>Save</Text>
         </TouchableOpacity>
         <Text onPress={handleVersionPress} style={styles.version} >version 1.0</Text>
