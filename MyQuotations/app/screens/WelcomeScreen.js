@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     scroll:{
       width:"100%",
       centerContent :true,
+      padding:20,
     },
     title:{
       paddingTop:50,

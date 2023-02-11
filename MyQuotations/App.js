@@ -8,14 +8,9 @@ export default function App() {
 const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{
-    headerShown: false
-  }}>
-        <Stack.Screen name="Welcome" component={WelcomeScreen} options={{title:'Welcome'}} ></Stack.Screen>
-        <Stack.Screen name="Setting" 
-        component={SettingScreen}
-        options={{title:'Setting'}}
-        ></Stack.Screen>
+      <Stack.Navigator>
+        <Stack.Screen name="Welcome" component={WelcomeScreen} options={{title:'Welcome',headerShown: false}} ></Stack.Screen>
+        <Stack.Screen name="Setting" component={SettingScreen} options={{title:'Setting',headerShown: false}} ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
